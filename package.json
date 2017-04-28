@@ -10,7 +10,12 @@
     "eggPlugin",
     "egg-plugin"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "extract-text-webpack-plugin": "^2.1.0",
+    "kcors": "^1.3.2",
+    "webpack": "^2.4.1",
+    "webpack-merge": "^4.1.0"
+  },
   "devDependencies": {
     "autod": "^2.7.1",
     "egg": "^1.0.0",

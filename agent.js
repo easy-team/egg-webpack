@@ -1,5 +1,8 @@
 'use strict';
 
 module.exports = agent => {
-  console.log('agent.config.env =', agent.config.env);
+  agent.logger.debug('agent start');
+  // require('./lib/service/client')(agent);
+  // require('./lib/service/server')(agent);
 };
+

@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": " server and client project build solution for egg + webpack",
   "eggPlugin": {
-    "name": "webpack"
+    "name": "webpack",
+    "env": [
+      "local"
+    ]
   },
   "keywords": [
     "egg",
@@ -12,8 +15,12 @@
   ],
   "dependencies": {
     "extract-text-webpack-plugin": "^2.1.0",
+    "koa": "^1.2.4",
+    "koa-webpack-dev-middleware": "^1.2.2",
+    "koa-webpack-hot-middleware": "^1.0.3",
     "kcors": "^1.3.2",
     "webpack": "^2.4.1",
+    "webpack-hot-middleware": "^2.13.2",
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {

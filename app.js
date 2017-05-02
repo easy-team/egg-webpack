@@ -4,9 +4,6 @@ const fs = require('fs');
 const Constant = require('./lib/service/constant');
 
 module.exports = app => {
-  app.webpack_server_build_success = true;
-  app.webpack_client_build_success = true;
-
   app.use(function* (next) {
 
     if (app.webpack_server_build_success && app.webpack_client_build_success) {

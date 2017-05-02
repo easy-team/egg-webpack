@@ -9,12 +9,12 @@
 
 [npm-image]: https://img.shields.io/npm/v/egg-webpack.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-webpack
-[travis-image]: https://img.shields.io/travis/eggjs/egg-webpack.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/egg-webpack
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-webpack.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/egg-webpack?branch=master
-[david-image]: https://img.shields.io/david/eggjs/egg-webpack.svg?style=flat-square
-[david-url]: https://david-dm.org/eggjs/egg-webpack
+[travis-image]: https://img.shields.io/travis/hubcarl/egg-webpack.svg?style=flat-square
+[travis-url]: https://travis-ci.org/hubcarl/egg-webpack
+[codecov-image]: https://img.shields.io/codecov/c/github/hubcarl/egg-webpack.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/hubcarl/egg-webpack?branch=master
+[david-image]: https://img.shields.io/david/hubcarl/egg-webpack.svg?style=flat-square
+[david-url]: https://david-dm.org/hubcarl/egg-webpack
 [snyk-image]: https://snyk.io/test/npm/egg-webpack/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/npm/egg-webpack
 [download-image]: https://img.shields.io/npm/dm/egg-webpack.svg?style=flat-square
@@ -43,6 +43,9 @@ exports.webpack = {
 ```js
 // {app_root}/config/config.default.js
 exports.webpack = {
+  // port: 8090,
+  // clientConfig: require(path.join(app.baseDir, 'build/easy/client.js')),
+  // serverConfig: require(path.join(app.baseDir, 'build/easy/server.js')),
 };
 ```
 
@@ -54,7 +57,7 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Questions & Suggestions
 
-Please open an issue [here](https://github.com/eggjs/egg/issues).
+Please open an issue [here](https://github.com/hubcarl/egg-webpack/issues).
 
 ## License
 

@@ -68,7 +68,7 @@ app.webpack.fileSystem.readServerFile(filePath).then(fileContent =>{
 })
 ```
 
-see [lib/service/filesystem.js](egg-webpack/lib/service/filesystem.js), [lib/service/client.js](egg-webpack/lib/service/client.js), [lib/service/server.js](egg-webpack/lib/service/server.js)  for more detail.
+see [lib/service/filesystem.js](lib/service/filesystem.js), [lib/service/client.js](lib/service/client.js), [lib/service/server.js](lib/service/server.js)  for more detail.
 
 
 - monitor webpack build state
@@ -76,7 +76,7 @@ see [lib/service/filesystem.js](egg-webpack/lib/service/filesystem.js), [lib/ser
 ```js
 app.messenger.on(app.webpack.Constant.EVENT_WEBPACK_CLIENT_BUILD_STATE, data => {
   if (data.state) {
-    const filepath = app.config.webpackvue.build.manifest;
+    const filepath = path.join(app.baseDir, 'config/manifest.json');
     const promise = app.webpack.fileSystem.readClientFile(filepath);
     promise.then(content => {
       fs.writeFileSync(filepath, content, 'utf8');
@@ -85,7 +85,7 @@ app.messenger.on(app.webpack.Constant.EVENT_WEBPACK_CLIENT_BUILD_STATE, data => 
 });
 ```
 
-see [lib/service/constant.js](egg-webpack/lib/service/constant.js) for more detail.
+see [lib/service/constant.js](lib/service/constant.js) for more detail.
 
 ## Questions & Suggestions
 

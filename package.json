@@ -1,7 +1,7 @@
 {
   "name": "egg-webpack",
   "version": "0.0.1",
-  "description": " server and client project build solution for egg + webpack",
+  "description": "webpack dev server plugin for egg, support read file in memory and hot reload.",
   "eggPlugin": {
     "name": "webpack",
     "env": [
@@ -11,10 +11,12 @@
   "keywords": [
     "egg",
     "eggPlugin",
-    "egg-plugin"
+    "egg-plugin",
+    "webpack",
+    "memory",
+    "hot-reload"
   ],
   "dependencies": {
-    "extract-text-webpack-plugin": "^2.1.0",
     "koa": "^1.2.4",
     "koa-webpack-dev-middleware": "^1.2.2",
     "koa-webpack-hot-middleware": "^1.0.3",

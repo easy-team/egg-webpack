@@ -12,8 +12,8 @@ module.exports = app => {
    */
   config.webpack = {
     port: 8090,
-    clientConfig: require(path.join(app.baseDir, 'build/easy/client.js')),
-    serverConfig: require(path.join(app.baseDir, 'build/easy/server.js')),
+    clientConfig: require(path.join(app.baseDir, 'build/client.js')),
+    serverConfig: require(path.join(app.baseDir, 'build/server.js')),
   };
 
   return config;

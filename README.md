@@ -20,7 +20,7 @@
 [download-image]: https://img.shields.io/npm/dm/egg-webpack.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-webpack
 
-webpack dev server plugin for egg, support read file in memory and hot reload.
+webpack dev server plugin for egg, support read file in memory and hot reload. [More Detail](http://hubcarl.github.io/blog/2017/04/15/egg-webpack/)
 
 
 ## Install
@@ -45,8 +45,8 @@ exports.webpack = {
 // {app_root}/config/config.default.js
 exports.webpack = {
   // port: 8090,
-  // clientConfig: require(path.join(app.baseDir, 'build/client.js')),
-  // serverConfig: require(path.join(app.baseDir, 'build/server.js')),
+  clientConfig: require(path.join(app.baseDir, 'build/client')),
+  serverConfig: require(path.join(app.baseDir, 'build/server')),
 };
 ```
 

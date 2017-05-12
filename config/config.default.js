@@ -1,7 +1,6 @@
 'use strict';
-const path = require('path');
 
-module.exports = app => {
+module.exports = () => {
   const config = {};
 
   /**
@@ -12,8 +11,8 @@ module.exports = app => {
    */
   config.webpack = {
     port: 8090,
-    clientConfig: require(path.join(app.baseDir, 'build/client.js')),
-    serverConfig: require(path.join(app.baseDir, 'build/server.js')),
+    // clientConfig: require(path.join(app.baseDir, 'build/client')),
+    // serverConfig: require(path.join(app.baseDir, 'build/server')),
   };
 
   return config;

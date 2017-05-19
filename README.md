@@ -45,8 +45,8 @@ exports.webpack = {
 // {app_root}/config/config.default.js
 exports.webpack = {
   // port: 8090,
-  clientConfig: require(path.join(app.baseDir, 'build/client')),
-  serverConfig: require(path.join(app.baseDir, 'build/server')),
+  // clientConfig: require(path.join(app.baseDir, 'build/client')),
+  // serverConfig: require(path.join(app.baseDir, 'build/server')),
 };
 ```
 

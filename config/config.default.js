@@ -11,7 +11,7 @@ module.exports = app => {
    * @property {Object} serverConfig - webpack server(node run) building config
    */
   config.webpack = {
-    port: 8888,
+    port: 8090,
   };
 
   const clientConfigPath = path.join(app.baseDir, 'build/client');

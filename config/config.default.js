@@ -9,6 +9,7 @@ module.exports = app => {
    * @property {Number} port - webpack dev server port
    * @property {Object} clientConfig - webpack client(browser run) building config
    * @property {Object} serverConfig - webpack server(node run) building config
+   * @property {Object | Array} [buildServer] - start custom webpack server
    */
   config.webpack = {
     port: 8090,

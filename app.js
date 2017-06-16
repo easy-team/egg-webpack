@@ -1,54 +1,28 @@
 'use strict';
 const path = require('path');
 const fs = require('fs');
-const Constant = require('./lib/service/constant');
+const Constant = require('./lib/constant');
 
 function isBuildFinish(app) {
-  const config = app.config.webpack;
-  if (config.serverConfig && config.clientConfig) {
-    return app.webpack_server_build_success && app.webpack_client_build_success;
-  }
-  if (config.serverConfig) {
-    return app.webpack_server_build_success;
-  }
-  if (config.clientConfig) {
-    return app.webpack_server_build_success;
-  }
-  return true;
+  return app.webpack_build_success;
 }
 
 module.exports = app => {
-
-  const config = app.config.webpack;
 
   app.use(function* (next) {
 
     if (isBuildFinish(app)) {
       yield* next;
     } else {
-      if (config.serverConfig) {
-        const serverData = yield new Promise(resolve => {
-          this.app.messenger.sendToAgent(Constant.EVENT_WEBPACK_SERVER_BUILD_STATE, {
-            webpackBuildCheck: true,
-          });
-          this.app.messenger.on(Constant.EVENT_WEBPACK_SERVER_BUILD_STATE, data => {
-            resolve(data);
-          });
+      const build = yield new Promise(resolve => {
+        this.app.messenger.sendToAgent(Constant.EVENT_WEBPACK_BUILD_STATE, {
+          webpackBuildCheck: true,
         });
-        app.webpack_server_build_success = serverData.state;
-      }
-
-      if (config.clientConfig) {
-        const clientData = yield new Promise(resolve => {
-          this.app.messenger.sendToAgent(Constant.EVENT_WEBPACK_CLIENT_BUILD_STATE, {
-            webpackBuildCheck: true,
-          });
-          this.app.messenger.on(Constant.EVENT_WEBPACK_CLIENT_BUILD_STATE, data => {
-            resolve(data);
-          });
+        this.app.messenger.on(Constant.EVENT_WEBPACK_BUILD_STATE, data => {
+          resolve(data);
         });
-        app.webpack_client_build_success = clientData.state;
-      }
+      });
+      app.webpack_build_success = build.state;
 
       if (isBuildFinish(app)) {
         yield* next;
@@ -63,11 +37,7 @@ module.exports = app => {
     }
   });
 
-  app.messenger.on(Constant.EVENT_WEBPACK_SERVER_BUILD_STATE, data => {
-    app.webpack_server_build_success = data.state;
-  });
-
-  app.messenger.on(Constant.EVENT_WEBPACK_CLIENT_BUILD_STATE, data => {
-    app.webpack_client_build_success = data.state;
+  app.messenger.on(Constant.EVENT_WEBPACK_BUILD_STATE, data => {
+    app.webpack_build_success = data.state;
   });
 };

@@ -1,6 +1,6 @@
 'use strict';
 
-const Engine = require('../../lib/service/engine');
+const Engine = require('../../lib/engine');
 const WEBPACK = Symbol('Application#webpack');
 
 module.exports = {

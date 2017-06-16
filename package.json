@@ -34,7 +34,8 @@
     "eslint": "^3.18.0",
     "eslint-config-egg": "^3.2.0",
     "supertest": "^3.0.0",
-    "webstorm-disable-index": "^1.1.2"
+    "webstorm-disable-index": "^1.1.2",
+    "opn": "^5.1.0"
   },
   "engines": {
     "node": ">=6.0.0"

@@ -45,8 +45,7 @@ exports.webpack = {
 // {app_root}/config/config.default.js
 exports.webpack = {
   // port: 8090,
-  // clientConfig: require(path.join(app.baseDir, 'build/client')),
-  // serverConfig: require(path.join(app.baseDir, 'build/server')),
+  // webpackConfigList: [],
 };
 ```
 
@@ -58,26 +57,20 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ```js
 // read webpack browser build mode memory file content
-app.webpack.fileSystem.readClientFile(filePath).then(fileContent =>{
+app.webpack.fileSystem.readWebpackMemoryFile(filePath).then(fileContent =>{
 
 })
 
-// read webpack node build mode memory file content
-app.webpack.fileSystem.readServerFile(filePath).then(fileContent =>{
-
-})
-```
-
-see [lib/service/filesystem.js](lib/service/filesystem.js), [lib/service/client.js](lib/service/client.js), [lib/service/server.js](lib/service/server.js)  for more detail.
+see [lib/server.js](lib/server.js)  for more detail.
 
 
 - monitor webpack build state
 
 ```js
-app.messenger.on(app.webpack.Constant.EVENT_WEBPACK_CLIENT_BUILD_STATE, data => {
+app.messenger.on(app.webpack.Constant.EVENT_WEBPACK_BUILD_STATE, data => {
   if (data.state) {
     const filepath = path.join(app.baseDir, 'config/manifest.json');
-    const promise = app.webpack.fileSystem.readClientFile(filepath);
+    const promise = app.webpack.fileSystem.readWebpackMemoryFile(filepath);
     promise.then(content => {
       fs.writeFileSync(filepath, content, 'utf8');
     });
@@ -85,7 +78,7 @@ app.messenger.on(app.webpack.Constant.EVENT_WEBPACK_CLIENT_BUILD_STATE, data => 
 });
 ```
 
-see [lib/service/constant.js](lib/service/constant.js) for more detail.
+see [lib/constant.js](lib/constant.js) for more detail.
 
 ## Questions & Suggestions
 

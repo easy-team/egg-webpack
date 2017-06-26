@@ -10,7 +10,7 @@ module.exports = () => {
    * @property {Array} [webpackConfigList] - webpack building config
    */
   config.webpack = {
-    port: 8090,
+    port: 9000,
     webpackConfigList: [],
   };
 

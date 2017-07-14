@@ -3,39 +3,38 @@ const path = require('path');
 const fs = require('fs');
 const Constant = require('./lib/constant');
 
-function isBuildFinish(app) {
-  return app.webpack_build_success;
-}
-
 module.exports = app => {
 
+  console.log('-------------egg-webpack-------');
   app.use(function* (next) {
-
-    if (isBuildFinish(app)) {
+    if (app.webpack_build_success) {
       yield* next;
     } else {
-      const build = yield new Promise(resolve => {
-        this.app.messenger.sendToAgent(Constant.EVENT_WEBPACK_BUILD_STATE, {
-          webpackBuildCheck: true,
-        });
-        this.app.messenger.on(Constant.EVENT_WEBPACK_BUILD_STATE, data => {
-          resolve(data);
-        });
-      });
-      app.webpack_build_success = build.state;
-
-      if (isBuildFinish(app)) {
-        yield* next;
+      if (app.webpack_loading_text) {
+        this.body = app.webpack_loading_text;
       } else {
-        if (app.webpack_loading_text) {
-          this.body = app.webpack_loading_text;
-        } else {
-          const filePath = path.resolve(__dirname, './lib/template/loading.html');
-          this.body = app.webpack_loading_text = fs.readFileSync(filePath, 'utf8');
-        }
+        const filePath = path.resolve(__dirname, './lib/template/loading.html');
+        this.body = app.webpack_loading_text = fs.readFileSync(filePath, 'utf8');
       }
     }
   });
+
+  if (app.config.webpack.proxy) {
+    app.use(function* (next) {
+      const ext = path.extname(this.url).toLocaleLowerCase().replace(/^\./, '');
+      const proxyMapping = app.config.webpack.proxyMapping;
+      const matched = Object.keys(proxyMapping).some(item => {
+        return item === ext;
+      });
+      if (matched) {
+        const filePath = path.join(this.app.baseDir, this.url);
+        this.set('Content-Type', proxyMapping[ext]);
+        this.body = yield app.webpack.fileSystem.readWebpackMemoryFile(filePath, this.url);
+      } else {
+        yield next;
+      }
+    });
+  }
 
   app.messenger.on(Constant.EVENT_WEBPACK_BUILD_STATE, data => {
     app.webpack_build_success = data.state;

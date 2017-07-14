@@ -1,4 +1,12 @@
 
+2.2.0 / 2017-07-14
+==================
+
+  * feat:http static resource mapping relative path
+  * feat:update default port 9000
+  * refactor:use webpack-tool start server
+  * docs:update use doc
+
 2.0.0 / 2017-06-19
 ==================
 

@@ -44,7 +44,8 @@ exports.webpack = {
 ```js
 // {app_root}/config/config.default.js
 exports.webpack = {
-  // port: 8090,
+  // port: 8090,  
+  // proxy: true,
   // webpackConfigList: [],
 };
 ```

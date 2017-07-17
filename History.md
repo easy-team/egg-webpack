@@ -1,4 +1,9 @@
 
+2.2.1 / 2017-07-17
+==================
+
+  * fix: node server code update, webpack loading state
+
 2.2.0 / 2017-07-14
 ==================
 

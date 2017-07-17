@@ -5,7 +5,7 @@ const Constant = require('./lib/constant');
 
 module.exports = app => {
 
-  console.log('-------------egg-webpack-------');
+  console.log('-------------egg-webpack  000001-------');
   app.use(function* (next) {
     if (app.webpack_build_success) {
       yield* next;
@@ -38,5 +38,9 @@ module.exports = app => {
 
   app.messenger.on(Constant.EVENT_WEBPACK_BUILD_STATE, data => {
     app.webpack_build_success = data.state;
+  });
+
+  app.ready(() => {
+    app.messenger.sendToAgent(Constant.EVENT_WEBPACK_BUILD_STATE);
   });
 };

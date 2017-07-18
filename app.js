@@ -5,7 +5,6 @@ const Constant = require('./lib/constant');
 
 module.exports = app => {
 
-  console.log('-------------egg-webpack  000001-------');
   app.use(function* (next) {
     if (app.webpack_build_success) {
       yield* next;

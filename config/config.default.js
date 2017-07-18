@@ -14,9 +14,10 @@ module.exports = () => {
     port: 9000,
     proxy: true,
     proxyMapping: {
-      js: 'text/javascript',
-      css: 'text/css',
-      json: 'application/json'
+      js: 'text/javascript; charset=UTF-8',
+      css: 'text/css; charset=UTF-8',
+      json: 'application/json; charset=UTF-8',
+      html: 'text/html; charset=UTF-8'
     },
     webpackConfigList: [],
   };

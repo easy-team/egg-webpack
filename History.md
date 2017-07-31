@@ -1,4 +1,10 @@
 
+2.2.4 / 2017-07-31
+==================
+
+  * fix:agent can not  call sendToApp before server started
+  * fix:hot port mapping easywepback
+
 2.2.2 / 2017-07-18
 ==================
 

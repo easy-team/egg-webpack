@@ -61,7 +61,7 @@ see [config/config.default.js](config/config.default.js) for more detail.
 app.webpack.fileSystem.readWebpackMemoryFile(filePath).then(fileContent =>{
 
 })
-
+```
 see [lib/server.js](lib/server.js)  for more detail.
 
 

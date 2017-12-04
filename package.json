@@ -17,6 +17,7 @@
     "hot-reload"
   ],
   "dependencies": {
+    "easywebpack-vue": "^3.2.1",
     "mkdirp": "^0.5.1",
     "webpack-tool": "^3.0.0"
   },

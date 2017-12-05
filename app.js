@@ -28,7 +28,7 @@ module.exports = app => {
       if (matched) {
         const filePath = path.join(this.app.baseDir, this.url);
         this.set('Content-Type', proxyMapping[ext]);
-        const content = yield app.webpack.fileSystem.readWebpackMemoryFile(filePath, this.url);
+        const content = yield app.webpack.fileSystem.readWebpackMemoryFile(filePath, this.url, 'web');
         if (content) {
           this.body = content;
         } else {

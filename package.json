@@ -1,6 +1,6 @@
 {
   "name": "egg-webpack",
-  "version": "3.0.2",
+  "version": "3.1.0-beta.2",
   "description": "webpack dev server plugin for egg, support read file in memory and hot reload.",
   "eggPlugin": {
     "name": "webpack",
@@ -17,7 +17,6 @@
     "hot-reload"
   ],
   "dependencies": {
-    "easywebpack-vue": "^3.2.1",
     "mkdirp": "^0.5.1",
     "webpack-tool": "^3.0.0"
   },

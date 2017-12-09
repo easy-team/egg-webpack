@@ -1,4 +1,10 @@
 
+3.2.1 / 2017-12-09
+==================
+
+  * refactor: adjust get webpack config logic
+  * refacotr: get webpack config login
+
 3.2.0 / 2017-12-08
 ==================
 

@@ -1,5 +1,3 @@
-import { fail } from 'assert';
-
 'use strict';
 const WebpackServer = require('./lib/server');
 const MultProcessWebpackServer = require('./lib/mult-process-server');

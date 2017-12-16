@@ -1,4 +1,11 @@
 
+3.2.4 / 2017-12-16
+==================
+
+  * fix: vscode auto import unuse package
+  * fix: support before low version
+  * fix: message tip
+
 3.2.2 / 2017-12-13
 ==================
 

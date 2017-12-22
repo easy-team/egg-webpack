@@ -2,6 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const Constant = require('./lib/constant');
+const Utils = require('./lib/utils');
 
 module.exports = app => {
 
@@ -26,9 +27,9 @@ module.exports = app => {
         return item === ext;
       });
       if (matched) {
-        const filePath = path.join(this.app.baseDir, this.url);
+        const filepath = Utils.normalizeProxyUrlFile(app, this.url);
         this.set('Content-Type', proxyMapping[ext]);
-        const content = yield app.webpack.fileSystem.readWebpackMemoryFile(filePath, this.url, 'web');
+        const content = yield app.webpack.fileSystem.readWebpackMemoryFile(filepath, this.url, 'web');
         if (content) {
           this.body = content;
         } else {

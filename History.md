@@ -1,4 +1,10 @@
 
+3.2.3 / 2017-12-22
+==================
+
+  * fix:modify publicPath, the proxy path is error
+  * fix: message tip
+
 3.2.2 / 2017-12-13
 ==================
 

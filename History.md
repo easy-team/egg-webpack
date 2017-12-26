@@ -1,4 +1,9 @@
 
+3.2.8 / 2017-12-26
+==================
+
+  * fix: compatible old version for dll and add use doc
+
 3.2.7 / 2017-12-26
 ==================
 

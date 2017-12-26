@@ -22,6 +22,8 @@
 
 webpack dev server plugin for egg, support read file in memory and hot reload. [More Detail](http://hubcarl.github.io/blog/2017/04/15/egg-webpack/)
 
+-  support webpack native configuration by `webpack.webpackConfigList`
+-  when no config `webpack.webpackConfigList`, egg-webpack will dynamic create webpack config by `webpack.config.js(easywebpack)`, and start multiple process build.
 
 ## Install
 
@@ -41,14 +43,67 @@ exports.webpack = {
 
 ## Configuration
 
+support native webpack config and easywebpack webpack config
+
 ```js
 // {app_root}/config/config.default.js
 exports.webpack = {
-  // port: 8090,  
+  // port: 9000,  
   // proxy: true,
   // webpackConfigList: [],
 };
 ```
+
+**port**: {Number}, default 9000. webpack dev server port, default 9000,  when hava multile webpack config, the port incremented。
+**proxy**: {Boolean}, default true. webpack compiled in a separate service inside, you can use project domain and port access static resources。
+**webpackConfigList**: {Array}, optional, default []. native webpack config.
+**webpackConfigFile**: {String}, optional, you must set when you easywebpack config file is not in the project root directory。
+
+
+### webpack native configuration
+
+- if you write one native webpack config `${app_root}/build/webpack.config.js`, you can use like this:
+
+```js
+// {app_root}/config/config.default.js
+exports.webpack = {
+  webpackConfigList: [require('../build/webpack.config.js')]
+};
+```
+
+- if you use easywebpack solution, you can use like this:
+
+default read `webpack.config.js` file under the project root directory.
+
+```js
+const EasyWebpack = require('easywebpack-vue');
+// {app_root}/config/config.default.js
+exports.webpack = {
+  webpackConfigList: EasyWebpack.getWebpackConfig()
+};
+```
+
+- if you use easywebpack solution, the easywebpack config file in `${app_root}/build/webpack.config.js`,  you can use like this:
+
+```js
+const EasyWebpack = require('easywebpack-vue');
+// {app_root}/config/config.default.js
+exports.webpack = {
+  webpackConfigList: EasyWebpack.getWebpackConfig('build/webpack.config.js')
+};
+```
+
+### easywebpack configuration
+
+The default read `webpack.config.js` file under the project root directory.
+
+```js
+// {app_root}/config/config.default.js
+exports.webpack = {
+  webpackConfigFile: 'build/webpack.config.js', // easywebpack config file path
+};
+```
+
 
 see [config/config.default.js](config/config.default.js) for more detail.
 

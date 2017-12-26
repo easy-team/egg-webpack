@@ -12,7 +12,6 @@ module.exports = agent => {
     if (Utils.isUseMultProcess(agent.baseDir, config)) {
       new MultProcessWebpackServer(agent, config).start();
     } else {
-      config.useDll = config.useDll || false;
       new WebpackServer(agent, config).start();
     }
   });

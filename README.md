@@ -43,7 +43,7 @@ exports.webpack = {
 
 ## Configuration
 
-support native webpack config and easywebpack webpack config
+**support native webpack config and easywebpack webpack config**
 
 ```js
 // {app_root}/config/config.default.js
@@ -54,10 +54,10 @@ exports.webpack = {
 };
 ```
 
-**port**: {Number}, default 9000. webpack dev server port, default 9000,  when hava multile webpack config, the port incremented。
-**proxy**: {Boolean}, default true. webpack compiled in a separate service inside, you can use project domain and port access static resources。
-**webpackConfigList**: {Array}, optional, default []. native webpack config.
-**webpackConfigFile**: {String}, optional, you must set when you easywebpack config file is not in the project root directory。
+- **port**: {Number}, default 9000. webpack dev server port, default 9000,  when hava multile webpack config, the port incremented。
+- **proxy**: {Boolean}, default true. webpack compiled in a separate service inside, you can use project domain and port access static resources。
+- **webpackConfigList**: {Array}, optional, default []. native webpack config.
+- **webpackConfigFile**: {String}, optional, you must set when you easywebpack config file is not in the project root directory。
 
 
 ### webpack native configuration

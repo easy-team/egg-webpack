@@ -1,4 +1,9 @@
 
+3.2.7 / 2017-12-26
+==================
+
+  * fix:node client render single webpackConfig
+
 3.2.5 / 2017-12-22
 ==================
 

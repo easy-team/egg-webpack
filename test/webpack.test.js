@@ -18,7 +18,7 @@ describe('test/webpack.test.js', () => {
   it('should GET /', () => {
     return request(app.callback())
       .get('/')
-      .expect('hi, webpack')
+      .expect('hi, egg-webpack')
       .expect(200);
   });
 });

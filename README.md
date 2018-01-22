@@ -55,6 +55,8 @@ exports.webpack = {
 ```
 
 - **port**: {Number}, default 9000. webpack dev server port, default 9000,  when hava multile webpack config, the port incremented。
+- **browser**: {Boolean | String}  if it is boolean type, whether to open the browser automatically, defualt true; if it is string, 
+That is url address, will automatically open the browser's url address。
 - **proxy**: {Boolean}, default true. webpack compiled in a separate service inside, you can use project domain and port access static resources。
 - **webpackConfigList**: {Array}, optional, default []. native webpack config.
 - **webpackConfigFile**: {String}, optional, you must set when you easywebpack config file is not in the project root directory。

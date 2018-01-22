@@ -5,6 +5,7 @@ const MultProcessWebpackServer = require('./lib/mult-process-server');
 module.exports = agent => {
   agent.messenger.on('egg-ready', () => {
     const config = agent.config.webpack;
+    agent.messenger.setMaxListeners(config.maxListeners || 10000);
     // 兼容 Node 前端渲染只有一个 webpack 配置
     if (config.webpackConfigList && !Array.isArray(config.webpackConfigList)) {
       config.webpackConfigList = [config.webpackConfigList];

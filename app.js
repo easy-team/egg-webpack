@@ -40,6 +40,8 @@ module.exports = app => {
       }
     });
   }
+  const config = app.config.webpack;
+  app.messenger.setMaxListeners(config.maxListeners || 10000);
 
   app.messenger.on(Constant.EVENT_WEBPACK_BUILD_STATE, data => {
     app.webpack_build_success = data.state;

@@ -1,3 +1,17 @@
+<a name="3.3.0"></a>
+# [3.3.0](https://github.com/hubcarl/egg-webpack/compare/3.2.8...3.3.0) (2018-01-22)
+
+
+### Features
+
+* support config.browser config, auto open browser or diable or custom url address ([dc4b322](https://github.com/hubcarl/egg-webpack/commit/dc4b322))
+
+
+### BugFixs
+
+* https://github.com/hubcarl/egg-vue-webpack-boilerplate/issues/54 ([dc4b322](https://github.com/hubcarl/egg-webpack/commit/dc4b322))
+
+
 
 3.2.8 / 2017-12-26
 ==================

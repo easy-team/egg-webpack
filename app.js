@@ -21,15 +21,16 @@ module.exports = app => {
 
   if (app.config.webpack.proxy) {
     app.use(function* (next) {
-      const ext = path.extname(this.url).toLocaleLowerCase().replace(/^\./, '');
+      const url = this.url.split('?')[0];
+      const ext = path.extname(url).toLocaleLowerCase().replace(/^\./, '');
       const proxyMapping = app.config.webpack.proxyMapping;
       const matched = Object.keys(proxyMapping).some(item => {
         return item === ext;
       });
       if (matched) {
-        const filepath = Utils.normalizeProxyUrlFile(app, this.url);
+        const filepath = Utils.normalizeProxyUrlFile(app, url);
         this.set('Content-Type', proxyMapping[ext]);
-        const content = yield app.webpack.fileSystem.readWebpackMemoryFile(filepath, this.url, 'web');
+        const content = yield app.webpack.fileSystem.readWebpackMemoryFile(filepath, url, 'web');
         if (content) {
           this.body = content;
         } else {

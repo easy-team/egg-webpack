@@ -2,10 +2,9 @@
 const path = require('path');
 const fs = require('fs');
 const Constant = require('./lib/constant');
-const Utils = require('./lib/utils');
-
+const proxy = require('koa-proxy');
 module.exports = app => {
-
+  const config = app.config.webpack;
   app.use(function* (next) {
     if (app.webpack_build_success) {
       yield* next;
@@ -19,29 +18,17 @@ module.exports = app => {
     }
   });
 
-  if (app.config.webpack.proxy) {
-    app.use(function* (next) {
-      const url = this.url.split('?')[0];
-      const ext = path.extname(url).toLocaleLowerCase().replace(/^\./, '');
-      const proxyMapping = app.config.webpack.proxyMapping;
-      const matched = Object.keys(proxyMapping).some(item => {
-        return item === ext;
-      });
-      if (matched) {
-        const filepath = Utils.normalizeProxyUrlFile(app, url);
-        this.set('Content-Type', proxyMapping[ext]);
-        const content = yield app.webpack.fileSystem.readWebpackMemoryFile(filepath, url, 'web');
-        if (content) {
-          this.body = content;
-        } else {
-          yield next;
-        }
-      } else {
-        yield next;
-      }
-    });
+  if (config.proxy) {
+    let proxyConfig = config.proxy;
+    if (typeof proxyConfig === 'boolean') {
+      proxyConfig = {
+        host: 'http://127.0.0.1:9000',
+        match: /^\/public\//,
+        yieldNext: true,
+      };
+    }
+    app.use(proxy(proxyConfig));
   }
-  const config = app.config.webpack;
   app.messenger.setMaxListeners(config.maxListeners || 10000);
 
   app.messenger.on(Constant.EVENT_WEBPACK_BUILD_STATE, data => {

@@ -5,20 +5,17 @@ module.exports = () => {
   /**
    * webpack build config
    * @property {Number} port - webpack dev server port
-   * @property {Boolean} proxy - js/css static resource http absolution path  mapping to relative path
-   *                    http://ip:port//public/client/js/vendor.js ->  /public/client/js/vendor.js
+   * @property {Object} proxy -  static resource http relative path mapping to true path @see https://github.com/popomore/koa-proxy
+   *                    /public/client/js/vendor.js -> http://ip:port//public/client/js/vendor.js   
    * @property {Object} proxyMapping  support proxy mapping, default js/css/json, not support image
    * @property {Array} [webpackConfigList] - webpack building config
    */
   config.webpack = {
     port: 9000,
-    proxy: true,
-    proxyMapping: {
-      js: 'text/javascript; charset=UTF-8',
-      css: 'text/css; charset=UTF-8',
-      json: 'application/json; charset=UTF-8',
-      html: 'text/html; charset=UTF-8',
-      map: 'application/json; charset=UTF-8'
+    proxy: {
+      host: 'http://127.0.0.1:9000', // target host that matched path will be proxy to
+      match: /^\/public\//, // path pattern.
+      yieldNext: true,
     },
     webpackConfigList: [],
   };

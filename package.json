@@ -1,6 +1,6 @@
 {
   "name": "egg-webpack",
-  "version": "4.0.0-rc.1",
+  "version": "4.0.0-rc.2",
   "description": "webpack dev server plugin for egg, support read file in memory and hot reload.",
   "eggPlugin": {
     "name": "webpack",

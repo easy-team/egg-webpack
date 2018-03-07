@@ -25,6 +25,11 @@ webpack dev server plugin for egg, support read file in memory and hot reload. [
 -  support webpack native configuration by `webpack.webpackConfigList`
 -  when no config `webpack.webpackConfigList`, egg-webpack will dynamic create webpack config by `webpack.config.js(easywebpack)`, and start multiple process build.
 
+## Version
+
+- egg-webpack ^4.x.x > webpack 4.x.x
+- egg-webpack ^3.x.x > webpack 3.x.x
+
 ## Install
 
 ```bash

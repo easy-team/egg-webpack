@@ -19,7 +19,7 @@
   "dependencies": {
     "koa-proxy": "^0.8.0",
     "mkdirp": "^0.5.1",
-    "webpack-tool": "next"
+    "webpack-tool": "^4.0.0"
   },
   "devDependencies": {
     "autod": "^2.7.1",

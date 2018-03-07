@@ -1,3 +1,21 @@
+<a name="4.0.2"></a>
+## [4.0.2](https://github.com/hubcarl/egg-webpack/compare/3.3.2...4.0.2) (2018-03-07)
+
+
+### Bug Fixes
+
+* egg-webpack proxy and webpack-tool proxy repeat ([dcea541](https://github.com/hubcarl/egg-webpack/commit/dcea541))
+
+
+### Features
+
+* add webpack target info ([eb6ea23](https://github.com/hubcarl/egg-webpack/commit/eb6ea23))
+* add webpackconfig parmas for stats ([bf9640c](https://github.com/hubcarl/egg-webpack/commit/bf9640c))
+* use koa-proxy proxy static resource ([86a7277](https://github.com/hubcarl/egg-webpack/commit/86a7277))
+* webpack target info show ([aacf45d](https://github.com/hubcarl/egg-webpack/commit/aacf45d))
+
+
+
 <a name="3.3.0"></a>
 # [3.3.0](https://github.com/hubcarl/egg-webpack/compare/3.2.8...3.3.0) (2018-01-22)
 

@@ -2,7 +2,6 @@
 const path = require('path');
 const fs = require('fs');
 const Constant = require('./lib/constant');
-const proxy = require('koa-proxy');
 module.exports = app => {
   const config = app.config.webpack;
   app.use(function* (next) {
@@ -18,17 +17,6 @@ module.exports = app => {
     }
   });
 
-  if (config.proxy) {
-    let proxyConfig = config.proxy;
-    if (typeof proxyConfig === 'boolean') {
-      proxyConfig = {
-        host: 'http://127.0.0.1:9000',
-        match: /^\/public\//,
-        yieldNext: true,
-      };
-    }
-    app.use(proxy(proxyConfig));
-  }
   app.messenger.setMaxListeners(config.maxListeners || 10000);
 
   app.messenger.on(Constant.EVENT_WEBPACK_BUILD_STATE, data => {

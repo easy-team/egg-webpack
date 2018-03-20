@@ -1,3 +1,13 @@
+<a name="3.3.3"></a>
+## [3.3.3](https://github.com/hubcarl/egg-webpack/compare/3.3.2...3.3.3) (2018-03-20)
+
+
+### Bug Fixes
+
+* file normalize replace ([11144ba](https://github.com/hubcarl/egg-webpack/commit/11144ba))
+
+
+
 <a name="3.3.0"></a>
 # [3.3.0](https://github.com/hubcarl/egg-webpack/compare/3.2.8...3.3.0) (2018-01-22)
 

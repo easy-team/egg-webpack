@@ -20,10 +20,8 @@
 [download-image]: https://img.shields.io/npm/dm/egg-webpack.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-webpack
 
-webpack dev server plugin for egg, support read file in memory and hot reload. [More Detail](http://hubcarl.github.io/blog/2017/04/15/egg-webpack/)
+Webpack dev server plugin for egg, support read file in memory and hot reload. [More Detail](http://hubcarl.github.io/blog/2017/04/15/egg-webpack/)
 
--  support webpack native configuration by `webpack.webpackConfigList`
--  when no config `webpack.webpackConfigList`, egg-webpack will dynamic create webpack config by `webpack.config.js(easywebpack)`, and start multiple process build.
 
 ## Version
 
@@ -62,7 +60,17 @@ exports.webpack = {
 - **port**: {Number}, default 9000. webpack dev server port, default 9000,  when hava multile webpack config, the port incremented。
 - **browser**: {Boolean | String}  if it is boolean type, whether to open the browser automatically, defualt true; if it is string, 
 That is url address, will automatically open the browser's url address。
-- **proxy**: {Boolean}, default true. webpack compiled in a separate service inside, you can use project domain and port access static resources。
+- **proxy**: {Boolean | Object}. webpack compiled in a separate service inside, default webpack service is http://127.0.0.1:9000, you can set koa-proxy options access static resources by [koa-proxy](https://github.com/popomore/koa-proxy)。the default options: 
+
+```js
+config.webpack = {
+  proxy: {
+    host: 'http://127.0.0.1:9000', // target host that matched path will be proxy to
+    match: /^\/public\/(?!js\/vendor.js)/, // path pattern.
+  },
+}
+```
+
 - **webpackConfigList**: {Array}, optional, default []. native webpack config.
 - **webpackConfigFile**: {String}, optional, you must set when you easywebpack config file is not in the project root directory。
 

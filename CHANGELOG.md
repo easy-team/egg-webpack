@@ -1,3 +1,14 @@
+<a name="4.0.5"></a>
+## [4.0.5](https://github.com/hubcarl/egg-webpack/compare/4.0.4...4.0.5) (2018-03-20)
+
+
+### Bug Fixes
+
+* normalizeUrlFile might get undefined ([b189183](https://github.com/hubcarl/egg-webpack/commit/b189183))
+* not use default port error ([5544f1e](https://github.com/hubcarl/egg-webpack/commit/5544f1e))
+
+
+
 <a name="4.0.4"></a>
 ## [4.0.4](https://github.com/hubcarl/egg-webpack/compare/4.0.3...4.0.4) (2018-03-20)
 

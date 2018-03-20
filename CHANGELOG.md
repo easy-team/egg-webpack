@@ -1,3 +1,13 @@
+<a name="4.0.4"></a>
+## [4.0.4](https://github.com/hubcarl/egg-webpack/compare/4.0.3...4.0.4) (2018-03-20)
+
+
+### Bug Fixes
+
+* static proxy ([69557b8](https://github.com/hubcarl/egg-webpack/commit/69557b8))
+
+
+
 <a name="4.0.2"></a>
 ## [4.0.2](https://github.com/hubcarl/egg-webpack/compare/3.3.2...4.0.2) (2018-03-07)
 

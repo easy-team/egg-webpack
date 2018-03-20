@@ -1,6 +1,6 @@
 {
   "name": "egg-webpack",
-  "version": "3.3.2",
+  "version": "3.3.3",
   "description": "webpack dev server plugin for egg, support read file in memory and hot reload.",
   "eggPlugin": {
     "name": "webpack",
@@ -58,6 +58,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hubcarl/egg-webpack.git"
+  },
+  "publishConfig":{
+    "tag": "3.x"
   },
   "bugs": {
     "url": "https://github.com/hubcarl/egg-webpack/issues"

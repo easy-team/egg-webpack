@@ -1,3 +1,13 @@
+<a name="3.3.4"></a>
+## [3.3.4](https://github.com/hubcarl/egg-webpack/compare/3.3.3...3.3.4) (2018-03-20)
+
+
+### Bug Fixes
+
+* mutil process build port error not use default config ([5bbcfc6](https://github.com/hubcarl/egg-webpack/commit/5bbcfc6))
+
+
+
 <a name="3.3.3"></a>
 ## [3.3.3](https://github.com/hubcarl/egg-webpack/compare/3.3.2...3.3.3) (2018-03-20)
 

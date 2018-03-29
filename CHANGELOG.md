@@ -1,3 +1,13 @@
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/hubcarl/egg-webpack/compare/4.0.5...4.1.0) (2018-03-29)
+
+
+### Features
+
+* support dll file use memory read ([c50bf27](https://github.com/hubcarl/egg-webpack/commit/c50bf27))
+
+
+
 <a name="4.0.5"></a>
 ## [4.0.5](https://github.com/hubcarl/egg-webpack/compare/4.0.4...4.0.5) (2018-03-20)
 

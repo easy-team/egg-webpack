@@ -21,7 +21,7 @@ module.exports = app => {
     if (typeof config.proxy === 'boolean') {
       config.proxy = {
         host: 'http://127.0.0.1:9000',
-        match: /^\/public\/(?!js\/vendor.js)/,
+        match: /^\/public\//,
       };
     }
     app.use(proxy(config.proxy));

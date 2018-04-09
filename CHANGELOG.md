@@ -1,3 +1,31 @@
+<a name="4.1.1"></a>
+## [4.1.1](https://github.com/hubcarl/egg-webpack/compare/3.2.4...4.1.1) (2018-04-09)
+
+
+### Bug Fixes
+
+* compatible old version for dll and add use doc ([ff2056e](https://github.com/hubcarl/egg-webpack/commit/ff2056e))
+* default url ([4484652](https://github.com/hubcarl/egg-webpack/commit/4484652))
+* egg static resource no proxy ([460b57c](https://github.com/hubcarl/egg-webpack/commit/460b57c))
+* egg-webpack proxy and webpack-tool proxy repeat ([dcea541](https://github.com/hubcarl/egg-webpack/commit/dcea541))
+* master process exit, child process exit ([0f4f433](https://github.com/hubcarl/egg-webpack/commit/0f4f433))
+* normalizeUrlFile might get undefined ([b189183](https://github.com/hubcarl/egg-webpack/commit/b189183))
+* not use default port error ([5544f1e](https://github.com/hubcarl/egg-webpack/commit/5544f1e))
+* static proxy ([69557b8](https://github.com/hubcarl/egg-webpack/commit/69557b8))
+* url has params , not match ([c084e72](https://github.com/hubcarl/egg-webpack/commit/c084e72))
+* webpack target info show ([aacf45d](https://github.com/hubcarl/egg-webpack/commit/aacf45d))
+
+
+### Features
+
+* add webpack target info ([eb6ea23](https://github.com/hubcarl/egg-webpack/commit/eb6ea23))
+* add webpackconfig parmas for stats ([bf9640c](https://github.com/hubcarl/egg-webpack/commit/bf9640c))
+* support config.browser config, auto open browser or diable  or custom url address ([dc4b322](https://github.com/hubcarl/egg-webpack/commit/dc4b322))
+* support dll file use memory read ([c50bf27](https://github.com/hubcarl/egg-webpack/commit/c50bf27))
+* use koa-proxy proxy static resource ([86a7277](https://github.com/hubcarl/egg-webpack/commit/86a7277))
+
+
+
 <a name="4.1.0"></a>
 # [4.1.0](https://github.com/hubcarl/egg-webpack/compare/4.0.5...4.1.0) (2018-03-29)
 

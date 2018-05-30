@@ -1,7 +1,7 @@
 'use strict';
 const path = require('path');
 const fs = require('fs');
-const proxy = require('koa-proxy');
+const proxy = require('./lib/proxy');
 const Constant = require('./lib/constant');
 module.exports = app => {
   app.use(function* (next) {

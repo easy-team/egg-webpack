@@ -1,3 +1,14 @@
+<a name="4.1.2"></a>
+## [4.1.2](https://github.com/hubcarl/egg-webpack/compare/4.1.0...4.1.2) (2018-05-30)
+
+
+### Bug Fixes
+
+* master process exit, child process exit ([0f4f433](https://github.com/hubcarl/egg-webpack/commit/0f4f433))
+* memory file not exist, use disk file ([bdd6e63](https://github.com/hubcarl/egg-webpack/commit/bdd6e63))
+
+
+
 <a name="4.1.1"></a>
 ## [4.1.1](https://github.com/hubcarl/egg-webpack/compare/3.2.4...4.1.1) (2018-04-09)
 

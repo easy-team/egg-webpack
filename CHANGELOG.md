@@ -1,3 +1,15 @@
+<a name="4.3.0"></a>
+# [4.3.0](https://github.com/hubcarl/egg-webpack/compare/4.1.2...4.3.0) (2018-09-16)
+
+
+### Features
+
+* auto get app port ([b099531](https://github.com/hubcarl/egg-webpack/commit/b099531))
+* upgrade webpack latest version for mini-css-extract-plugin ([fe5c205](https://github.com/hubcarl/egg-webpack/commit/fe5c205))
+* zero config ([3dd7b4a](https://github.com/hubcarl/egg-webpack/commit/3dd7b4a))
+
+
+
 <a name="4.1.2"></a>
 ## [4.1.2](https://github.com/hubcarl/egg-webpack/compare/4.1.0...4.1.2) (2018-05-30)
 

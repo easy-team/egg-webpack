@@ -1,3 +1,13 @@
+<a name="4.3.1"></a>
+## [4.3.1](https://github.com/hubcarl/egg-webpack/compare/4.3.0...4.3.1) (2018-09-17)
+
+
+### Bug Fixes
+
+* webpack  proxy url port when webpack server port update ([b5dd55a](https://github.com/hubcarl/egg-webpack/commit/b5dd55a))
+
+
+
 <a name="4.3.0"></a>
 # [4.3.0](https://github.com/hubcarl/egg-webpack/compare/4.1.2...4.3.0) (2018-09-16)
 

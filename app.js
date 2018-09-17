@@ -24,6 +24,9 @@ module.exports = app => {
         match: /^\/public\//,
       };
     }
+    if (config.port && config.port !== 9000 && config.proxy.host) {
+      config.proxy.host = config.proxy.host.replace(9000, config.port);
+    }
     app.use(proxy(config.proxy));
   }
   app.messenger.setMaxListeners(config.maxListeners || 10000);

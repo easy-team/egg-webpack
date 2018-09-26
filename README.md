@@ -52,7 +52,7 @@ exports.webpack = {
 // {app_root}/config/config.default.js
 exports.webpack = {
   // port: 9000,  
-  // proxy: true,
+
   // webpackConfigList: [],
 };
 ```
@@ -66,7 +66,7 @@ That is url address, will automatically open the browser's url address。
 config.webpack = {
   proxy: {
     host: 'http://127.0.0.1:9000', // target host that matched path will be proxy to
-    match: /^\/public\/(?!js\/vendor.js)/, // path pattern.
+    match: /^\/public\//, // proxy url path pattern.
   },
 }
 ```

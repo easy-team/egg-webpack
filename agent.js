@@ -1,5 +1,5 @@
 'use strict';
-const Utils = require('./lib/utils');
+const utils = require('./lib/utils');
 const WebpackServer = require('./lib/server');
 const MultProcessWebpackServer = require('./lib/mult-process-server');
 module.exports = agent => {
@@ -12,9 +12,11 @@ module.exports = agent => {
     }
     // webpack-tool not need proxy again
     const pluginConfig = Object.assign({}, config, { proxy: false });
-    if (Utils.isUseMultProcess(agent.baseDir, config)) {
+    if (utils.isUseMultProcess(agent.baseDir, config)) {
       new MultProcessWebpackServer(agent, pluginConfig).start();
     } else {
+      const port = utils.getPort(config.port);
+      pluginConfig.port = port;
       new WebpackServer(agent, pluginConfig).start();
     }
   });

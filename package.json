@@ -17,10 +17,11 @@
     "hot-reload"
   ],
   "dependencies": {
-    "mkdirp": "^0.5.1",
-    "webpack-tool": "^4.1.0",
     "co-request": "^0.2.0",
-    "iconv-lite": "^0.2.11"
+    "iconv-lite": "^0.2.11",
+    "mkdirp": "^0.5.1",
+    "node-tool-utils": "^1.0.0",
+    "webpack-tool": "^4.1.0"
   },
   "devDependencies": {
     "autod": "^2.7.1",

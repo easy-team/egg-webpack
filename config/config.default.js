@@ -1,5 +1,6 @@
 'use strict';
 module.exports = () => {
+  const port = 9000;
   const config = {};
 
   /**
@@ -11,9 +12,9 @@ module.exports = () => {
    * @property {Array} [webpackConfigList] - webpack building config
    */
   config.webpack = {
-    port: 9000,
+    port,
     proxy: {
-      host: 'http://127.0.0.1:9000', // target host that matched path will be proxy to
+      host: `http://127.0.0.1:${port}`, // target host that matched path will be proxy to
       match: /^\/public\//, // path pattern.
     },
     webpackConfigList: [],

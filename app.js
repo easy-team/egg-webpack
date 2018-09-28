@@ -1,6 +1,7 @@
 'use strict';
 const path = require('path');
 const fs = require('fs');
+const WebpackTool = require('webpack-tool');
 const proxy = require('./lib/proxy');
 const utils = require('./lib/utils');
 const Constant = require('./lib/constant');
@@ -33,6 +34,16 @@ module.exports = app => {
         config.proxy.host = config.proxy.host.replace(config.port, port);
       }
       app.use(proxy(config.proxy));
+    }
+  });
+
+  app.messenger.on(Constant.EVENT_WEBPACK_OPEN_BROWSER, () => {
+    const appPort = app.options.port;
+    const browser = app.config.webpack.browser;
+    if (/^https?/.test(browser)) {
+      WebpackTool.utils.openBrowser(appPort, browser);
+    } else if (this.browser === undefined || browser === true) {
+      WebpackTool.utils.openBrowser(appPort);
     }
   });
 

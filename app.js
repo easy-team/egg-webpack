@@ -2,6 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const WebpackTool = require('webpack-tool');
+const convert = require('koa-convert');
 const proxy = require('./lib/proxy');
 const utils = require('./lib/utils');
 const Constant = require('./lib/constant');
@@ -33,7 +34,7 @@ module.exports = app => {
       } else if (config.proxy.host) {
         config.proxy.host = config.proxy.host.replace(config.port, port);
       }
-      app.use(proxy(config.proxy));
+      app.middleware.splice(app.middleware.length - 2, 1, convert(proxy(config.proxy)));
     }
   });
 

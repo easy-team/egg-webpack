@@ -57,16 +57,16 @@
     "lib"
   ],
   "ci": {
-    "version": "6, 8, 9"
+    "version": "6, 8, 10"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hubcarl/egg-webpack.git"
+    "url": "git+https://github.com/easy-team/egg-webpack.git"
   },
   "bugs": {
-    "url": "https://github.com/hubcarl/egg-webpack/issues"
+    "url": "https://github.com/easy-team/egg-webpack/issues"
   },
-  "homepage": "https://github.com/hubcarl/egg-webpack#readme",
+  "homepage": "https://github.com/easy-team/egg-webpack#readme",
   "author": "hubcarl@126.com",
   "license": "MIT"
 }

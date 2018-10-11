@@ -1,3 +1,13 @@
+<a name="4.4.1"></a>
+## [4.4.1](https://github.com/hubcarl/egg-webpack/compare/4.4.0...4.4.1) (2018-10-11)
+
+
+### Bug Fixes
+
+* koa proxy register order ([510904b](https://github.com/hubcarl/egg-webpack/commit/510904b))
+
+
+
 <a name="4.3.1"></a>
 ## [4.3.1](https://github.com/hubcarl/egg-webpack/compare/4.3.0...4.3.1) (2018-09-17)
 

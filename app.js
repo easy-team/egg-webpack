@@ -33,7 +33,7 @@ module.exports = app => {
       } else if (config.proxy.host) {
         config.proxy.host = config.proxy.host.replace(config.port, port);
       }
-      app.middleware.splice(app.middleware.length - 2, 1, convert(proxy(config.proxy)));
+      app.middleware.splice(app.middleware.length - 2, 0, convert(proxy(config.proxy)));
     }
   });
 

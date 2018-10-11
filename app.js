@@ -4,7 +4,6 @@ const fs = require('fs');
 const WebpackTool = require('webpack-tool');
 const convert = require('koa-convert');
 const proxy = require('./lib/proxy');
-const utils = require('./lib/utils');
 const Constant = require('./lib/constant');
 module.exports = app => {
   app.use(function* (next) {
@@ -24,7 +23,7 @@ module.exports = app => {
   app.messenger.on(Constant.EVENT_WEBPACK_BUILD_STATE, data => {
     app.WEBPACK_BUILD_READY = data.state;
     const config = app.config.webpack;
-    const port = utils.getPort(data.port || config.port);
+    const port = data.port;
     if (config.proxy) {
       if (typeof config.proxy === 'boolean') {
         config.proxy = {

@@ -1,3 +1,13 @@
+<a name="4.4.2"></a>
+## [4.4.2](https://github.com/easy-team/egg-webpack/compare/4.4.1...4.4.2) (2018-10-11)
+
+
+### Bug Fixes
+
+* worker reload get new port will lead static file error ([b532423](https://github.com/easy-team/egg-webpack/commit/b532423))
+
+
+
 <a name="4.4.1"></a>
 ## [4.4.1](https://github.com/hubcarl/egg-webpack/compare/4.4.0...4.4.1) (2018-10-11)
 

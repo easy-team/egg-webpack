@@ -1,3 +1,13 @@
+<a name="4.4.4"></a>
+## [4.4.4](https://github.com/easy-team/egg-webpack/compare/4.4.3...4.4.4) (2018-10-12)
+
+
+### Bug Fixes
+
+* webpack loading when file update ([ce79a4c](https://github.com/easy-team/egg-webpack/commit/ce79a4c))
+
+
+
 <a name="4.4.2"></a>
 ## [4.4.2](https://github.com/easy-team/egg-webpack/compare/4.4.1...4.4.2) (2018-10-11)
 

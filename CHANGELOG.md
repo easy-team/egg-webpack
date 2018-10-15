@@ -1,3 +1,13 @@
+<a name="4.4.5"></a>
+## [4.4.5](https://github.com/easy-team/egg-webpack/compare/4.4.4...4.4.5) (2018-10-15)
+
+
+### Bug Fixes
+
+* config.target:web webpack config error ([77d5592](https://github.com/easy-team/egg-webpack/commit/77d5592))
+
+
+
 <a name="4.4.4"></a>
 ## [4.4.4](https://github.com/easy-team/egg-webpack/compare/4.4.3...4.4.4) (2018-10-12)
 

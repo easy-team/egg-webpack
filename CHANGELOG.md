@@ -1,3 +1,13 @@
+<a name="4.4.6"></a>
+## [4.4.6](https://github.com/easy-team/egg-webpack/compare/4.4.5...4.4.6) (2018-10-16)
+
+
+### Bug Fixes
+
+* webpack proxy repeat register ([a12fa74](https://github.com/easy-team/egg-webpack/commit/a12fa74))
+
+
+
 <a name="4.4.5"></a>
 ## [4.4.5](https://github.com/easy-team/egg-webpack/compare/4.4.4...4.4.5) (2018-10-15)
 

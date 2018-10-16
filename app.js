@@ -24,7 +24,8 @@ module.exports = app => {
     app.WEBPACK_BUILD_READY = data.state;
     const config = app.config.webpack;
     const port = data.port;
-    if (config.proxy) {
+    if (!app.WEBPACK_BUILD_PROXY && config.proxy) {
+      app.WEBPACK_BUILD_PROXY = true;
       if (typeof config.proxy === 'boolean') {
         config.proxy = {
           host: `http://127.0.0.1:${port}`,

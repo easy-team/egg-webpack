@@ -43,7 +43,7 @@ module.exports = app => {
     const browser = app.config.webpack.browser;
     if (/^https?/.test(browser)) {
       WebpackTool.utils.openBrowser(appPort, browser);
-    } else if (this.browser === undefined || browser === true) {
+    } else if (browser === undefined || browser === true) {
       WebpackTool.utils.openBrowser(appPort);
     }
   });

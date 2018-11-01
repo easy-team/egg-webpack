@@ -1,3 +1,13 @@
+<a name="4.4.9"></a>
+## [4.4.9](https://github.com/easy-team/egg-webpack/compare/4.4.8...4.4.9) (2018-11-01)
+
+
+### Bug Fixes
+
+* child process not exit ([20a02d1](https://github.com/easy-team/egg-webpack/commit/20a02d1))
+
+
+
 <a name="4.4.8"></a>
 ## [4.4.8](https://github.com/easy-team/egg-webpack/compare/4.4.7...4.4.8) (2018-10-26)
 

@@ -20,4 +20,7 @@ module.exports = agent => {
       new WebpackServer(agent, pluginConfig).start();
     }
   });
+  process.on('exit', () => {
+    process.exit(0);
+  });
 };

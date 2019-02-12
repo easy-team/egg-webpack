@@ -132,6 +132,25 @@ app.webpack.fileSystem.readWebpackMemoryFile(filePath).then(fileContent =>{
 
 })
 ```
+
+- render vue from webpack memory
+
+```js
+'usestrict';
+const path = require('path');
+const egg = require('egg');
+const vueServerRenderer = require('vue-server-renderer');
+module.exports = class IndexController extends egg.Controller {
+  async index(ctx) {
+    const { app } = ctx;
+    const filepath = path.join(app.config.view.root[0], 'app.js');
+    // server render mode, the webpack config target:node
+    const strJSBundle = await app.webpack.fileSystem.readWebpackMemoryFile(filepath);
+    ctx.body = await vueServerRenderer.createBundleRenderer(strJSBundle).renderToString({});
+  }
+};
+```
+
 see [lib/server.js](lib/server.js)  for more detail.
 
 

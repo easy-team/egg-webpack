@@ -1,3 +1,13 @@
+<a name="4.5.0"></a>
+# [4.5.0](https://github.com/easy-team/egg-webpack/compare/4.4.9...4.5.0) (2019-08-03)
+
+
+### Features
+
+* compatible [@easy-team](https://github.com/easy-team) mode ([c34806b](https://github.com/easy-team/egg-webpack/commit/c34806b))
+
+
+
 <a name="4.4.9"></a>
 ## [4.4.9](https://github.com/easy-team/egg-webpack/compare/4.4.8...4.4.9) (2018-11-01)
 

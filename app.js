@@ -23,7 +23,7 @@ module.exports = app => {
   app.messenger.on(Constant.EVENT_WEBPACK_BUILD_STATE, data => {
     app.WEBPACK_BUILD_READY = data.state;
     const config = app.config.webpack;
-    const port = data.port;
+    const port = data.port || config.port;
     if (!app.WEBPACK_BUILD_PROXY && config.proxy) {
       app.WEBPACK_BUILD_PROXY = true;
       if (typeof config.proxy === 'boolean') {
@@ -31,8 +31,8 @@ module.exports = app => {
           host: `http://127.0.0.1:${port}`,
           match: /^\/public\//,
         };
-      } else if (config.proxy.host) {
-        config.proxy.host = config.proxy.host.replace(config.port, port);
+      } else if (config.proxy.force !== true) {
+        config.proxy.host = `http://127.0.0.1:${port}`;
       }
       app.middleware.splice(app.middleware.length - 2, 0, convert(proxy(config.proxy)));
     }

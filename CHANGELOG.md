@@ -1,3 +1,13 @@
+<a name="4.5.1"></a>
+## [4.5.1](https://github.com/easy-team/egg-webpack/compare/4.5.0...4.5.1) (2019-08-08)
+
+
+### Bug Fixes
+
+* port proxy not effective ([fa46f99](https://github.com/easy-team/egg-webpack/commit/fa46f99))
+
+
+
 <a name="4.5.0"></a>
 # [4.5.0](https://github.com/easy-team/egg-webpack/compare/4.4.9...4.5.0) (2019-08-03)
 

@@ -122,9 +122,9 @@ exports.webpack = {
 
 see [config/config.default.js](config/config.default.js) for more detail.
 
-## Customise
+## Customize
 
-- mount `app.webpack.fileSystem` to app, you can customize the file read logic
+- mount `app.webpack.fileSystem` to app, you can customize the webpack memory file read logic
 
 ```js
 // read webpack browser build mode memory file content

@@ -1,3 +1,13 @@
+<a name="4.5.3"></a>
+## [4.5.3](https://github.com/easy-team/egg-webpack/compare/4.5.2...4.5.3) (2020-04-11)
+
+
+### Bug Fixes
+
+* child process running port had used ([f4ffc2c](https://github.com/easy-team/egg-webpack/commit/f4ffc2c))
+
+
+
 <a name="4.5.1"></a>
 ## [4.5.1](https://github.com/easy-team/egg-webpack/compare/4.5.0...4.5.1) (2019-08-08)
 

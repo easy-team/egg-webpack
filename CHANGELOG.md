@@ -1,3 +1,13 @@
+<a name="4.5.4"></a>
+## [4.5.4](https://github.com/easy-team/egg-webpack/compare/4.5.3...4.5.4) (2020-07-20)
+
+
+### Bug Fixes
+
+* https://github.com/easy-team/egg-webpack/issues/23 ([40a7c2b](https://github.com/easy-team/egg-webpack/commit/40a7c2b))
+
+
+
 <a name="4.5.3"></a>
 ## [4.5.3](https://github.com/easy-team/egg-webpack/compare/4.5.2...4.5.3) (2020-04-11)
 

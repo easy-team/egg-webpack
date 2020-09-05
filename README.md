@@ -56,10 +56,11 @@ exports.webpack = {
 };
 ```
 
-- **port**: {Number}, default 9000. webpack dev server port, default 9000,  when hava multile webpack config, the port incremented。
-- **browser**: {Boolean | String}  if it is boolean type, whether to open the browser automatically, defualt true; if it is string, 
+- **port**: {Number}, default 9000。webpack dev server port, default 9000,  when hava multile webpack config, the port incremented。
+- **offsetPort**: {Boolean}, default false。when mutil webpack target web config, need set true。
+- **browser**: {Boolean | String}  if it is boolean type, whether to open the browser automatically, defualt true; if it is string。
 That is url address, will automatically open the browser's url address。
-- **proxy**: {Boolean | Object}. webpack compiled in a separate service inside, default webpack service is http://127.0.0.1:9000, you can set koa-proxy options access static resources by [koa-proxy](https://github.com/popomore/koa-proxy)。the default options: 
+- **proxy**: {Boolean | Object}. webpack compiled in a separate service inside, default webpack service is http://127.0.0.1:9000, you can set koa-proxy options access static resources by [koa-proxy](https://github.com/popomore/koa-proxy)。the default options:
 
 ```js
 config.webpack = {

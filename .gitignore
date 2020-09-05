@@ -10,3 +10,4 @@ vscode
 *.iml
 package-lock.json
 yarn.lock
+.github

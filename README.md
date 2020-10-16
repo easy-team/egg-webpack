@@ -24,6 +24,7 @@ Webpack dev server plugin for egg, support read file in memory and hot reload. [
 
 ## Version
 
+- egg-webpack ^5.x.x > webpack 5.x.x
 - egg-webpack ^4.x.x > webpack 4.x.x
 - egg-webpack ^3.x.x > webpack 3.x.x
 

@@ -1,3 +1,14 @@
+
+<a name="5.0.0"></a>
+## [5.0.0](https://github.com/hubcarl/egg-webpack/compare/4.5.4...5.0.0) (2018-03-07)
+
+
+### Features
+
+* webpack5 ([93d8f18](https://github.com/hubcarl/egg-webpack/commit/93d8f18))
+* yield generator to async ([84103e1](https://github.com/hubcarl/egg-webpack/commit/84103e1))
+
+
 <a name="4.5.4"></a>
 ## [4.5.4](https://github.com/easy-team/egg-webpack/compare/4.5.3...4.5.4) (2020-07-20)
 

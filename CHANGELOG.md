@@ -1,3 +1,13 @@
+<a name="4.5.5"></a>
+## [4.5.5](https://github.com/easy-team/egg-webpack/compare/4.5.4...4.5.5) (2021-02-05)
+
+
+### Bug Fixes
+
+* 静态资源进入 middleware, proxy middleware 插入需要在静态资源和自定义中间件前面 ([3b8af83](https://github.com/easy-team/egg-webpack/commit/3b8af83))
+
+
+
 <a name="4.5.4"></a>
 ## [4.5.4](https://github.com/easy-team/egg-webpack/compare/4.5.3...4.5.4) (2020-07-20)
 

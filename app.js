@@ -34,7 +34,19 @@ module.exports = app => {
       } else if (config.proxy.force !== true) {
         config.proxy.host = `http://127.0.0.1:${port}`;
       }
-      app.middleware.splice(app.middleware.length - 2, 0, convert(proxy(config.proxy)));
+      // 解决 proxy middleware 插入需要在静态资源和自定义中间件前面
+      let proxyIndex = -1;
+      const mwNames = ['static', 'bodyParser', 'overrideMethod', 'session', 'securities', 'notfound', 'siteFile', 'meta'];
+      while(mwNames.length) {
+        const name = mwNames.shift();
+        proxyIndex = app.middleware.findIndex(mw => {
+          return mw._name === name;
+        });
+        if (proxyIndex > -1) {
+          break;
+        }
+      }
+      app.middleware.splice(proxyIndex, 0, convert(proxy(config.proxy)));
     }
   });
 

@@ -1,11 +1,22 @@
-<a name="4.5.5"></a>
-## [4.5.5](https://github.com/easy-team/egg-webpack/compare/4.5.4...4.5.5) (2021-02-05)
+<a name="5.0.1"></a>
+## [5.0.1](https://github.com/easy-team/egg-webpack/compare/5.0.0...5.0.1) (2021-02-05)
 
 
 ### Bug Fixes
 
-* 静态资源进入 middleware, proxy middleware 插入需要在静态资源和自定义中间件前面 ([3b8af83](https://github.com/easy-team/egg-webpack/commit/3b8af83))
+* 静态资源进入 middleware, proxy middleware 插入需要在静态资源和自定义中间件前面 ([2231440](https://github.com/easy-team/egg-webpack/commit/2231440))
 
+
+
+
+<a name="5.0.0"></a>
+## [5.0.0](https://github.com/hubcarl/egg-webpack/compare/4.5.4...5.0.0) (2018-03-07)
+
+
+### Features
+
+* webpack5 ([93d8f18](https://github.com/hubcarl/egg-webpack/commit/93d8f18))
+* yield generator to async ([84103e1](https://github.com/hubcarl/egg-webpack/commit/84103e1))
 
 
 <a name="4.5.4"></a>

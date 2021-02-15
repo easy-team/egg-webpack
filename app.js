@@ -6,15 +6,15 @@ const convert = require('koa-convert');
 const proxy = require('./lib/proxy');
 const Constant = require('./lib/constant');
 module.exports = app => {
-  app.use(function* (next) {
+  app.use(async (ctx, next) => {
     if (app.WEBPACK_BUILD_READY) {
-      yield* next;
+      await next();
     } else {
       if (app.WEBPACK_LOADING_TEXT) {
-        this.body = app.WEBPACK_LOADING_TEXT;
+        ctx.body = app.WEBPACK_LOADING_TEXT;
       } else {
         const filePath = path.resolve(__dirname, './lib/template/loading.html');
-        this.body = app.WEBPACK_LOADING_TEXT = fs.readFileSync(filePath, 'utf8');
+        ctx.body = app.WEBPACK_LOADING_TEXT = fs.readFileSync(filePath, 'utf8');
       }
     }
   });
@@ -37,7 +37,7 @@ module.exports = app => {
       // 解决 proxy middleware 插入需要在静态资源和自定义中间件前面
       let proxyIndex = -1;
       const mwNames = ['static', 'bodyParser', 'overrideMethod', 'session', 'securities', 'notfound', 'siteFile', 'meta'];
-      while(mwNames.length) {
+      while (mwNames.length) {
         const name = mwNames.shift();
         proxyIndex = app.middleware.findIndex(mw => {
           return mw._name === name;
